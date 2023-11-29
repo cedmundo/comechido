@@ -172,6 +172,7 @@
   ],
   "schedules": [
     {
+      "key": "breakfast",
       "time": "09:00",
       "name": "Desayuno",
       "points":[
@@ -188,6 +189,7 @@
       ]
     },
     {
+      "key": "morning_collation",
       "time": "12:00",
       "name": "Colación Matutina",
       "points":[
@@ -202,6 +204,7 @@
       ]
     },
     {
+      "key": "lunch",
       "time": "15:00",
       "name": "Comida",
       "points":[
@@ -216,6 +219,7 @@
       ]
     },
     {
+      "key": "evening_collation",
       "time": "18:00",
       "name": "Colación Vespertina",
       "points":[
@@ -230,7 +234,8 @@
       ]
     },
     {
-      "time": "21:00",
+      "key": "dinner",
+      "time": "22:00",
       "name": "Cena",
       "points":[
         {"group": "vegetables", "points": 1},

@@ -12,8 +12,11 @@
     "@sveltejs/vite-plugin-svelte": "^3.0.0",
     "autoprefixer": "^10.4.16",
     "daisyui": "^4.4.14",
+    "i": "^0.3.7",
     "postcss": "^8.4.31",
     "svelte": "^4.2.3",
+    "svelte-routing": "^2.9.0",
+    "svelte-tabler": "^0.6.3",
     "tailwindcss": "^3.3.5",
     "vite": "^5.0.0"
   }
