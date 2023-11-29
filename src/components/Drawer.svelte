@@ -1,9 +1,9 @@
 <script>
     import db from "../assets/database.json";
-    import {Router, Link, Route} from "svelte-routing";
-    import {CalendarTime, Database} from "svelte-tabler";
-    import ScheduleEntryView from "./ScheduleEntryView.svelte";
-    import ExploreDatabaseView from "./ExploreDatabaseView.svelte";
+    import {Router, Link, Route} from 'svelte-routing';
+    import {IconCalendar, IconDatabase} from '@tabler/icons-svelte';
+    import ScheduleEntryView from "./ScheduleEntry.svelte";
+    import ExploreDatabaseView from "./ExploreDatabase.svelte";
 
     export let url = "";
     let {schedules} = db;
@@ -23,10 +23,10 @@
         </div>
         <div class="drawer-side">
             <label for="app-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+            <ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content z-50">
                 <li>
                     <Link to="/">
-                        <CalendarTime/>
+                        <IconCalendar />
                         Ahora mismo
                     </Link>
                 </li>
@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <Link to="/explore">
-                        <Database/>
+                        <IconDatabase />
                         Explorar
                     </Link>
                 </li>

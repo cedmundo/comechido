@@ -1,5 +1,5 @@
 {
-  "ingridients": [
+  "ingredients": [
     {"group": "vegetables", "name": "Acelga cocida", "point_exchange": 0.5, "unit": "tza"},
     {"group": "vegetables", "name": "Berenjena cocida", "point_exchange": 1, "unit": "tza"},
     {"group": "vegetables", "name": "Brócoli cocido", "point_exchange": 0.5, "unit": "tza"},
@@ -177,8 +177,6 @@
       "name": "Desayuno",
       "points":[
         {"group": "vegetables", "points": 1},
-        {"group": "vegetables", "points": 1},
-        {"group": "vegetables", "points": 1},
         {"group": "fruits", "points": 0},
         {"group": "cereals", "points": 3},
         {"group": "legumes", "points": 0},
@@ -198,7 +196,7 @@
         {"group": "cereals", "points": 1},
         {"group": "legumes", "points": 0},
         {"group": "animal_products", "points": 0},
-        {"group": "dairy", "points": 0.5},
+        {"group": "dairy", "points": 1},
         {"group": "fats", "points": 1},
         {"group": "sugars", "points": 0}
       ]
@@ -228,7 +226,7 @@
         {"group": "cereals", "points": 1},
         {"group": "legumes", "points": 0},
         {"group": "animal_products", "points": 3},
-        {"group": "dairy", "points": 0.5},
+        {"group": "dairy", "points": 1},
         {"group": "fats", "points": 1},
         {"group": "sugars", "points": 0}
       ]
@@ -248,5 +246,15 @@
         {"group": "sugars", "points": 0}
       ]
     }
-  ]
+  ],
+  "foodGroups": {
+    "vegetables": {"name": "Verduras", "icon": "carrot"},
+    "fruits": {"name": "Frutas", "icon": "apple"},
+    "cereals": {"name": "Cereales", "icon": "baguette"},
+    "legumes": {"name":  "Legumbres", "icon": "salad"},
+    "animal_products": {"name": "POA", "icon": "meat"},
+    "dairy": {"name": "Lácteos", "icon": "milk"},
+    "fats": {"name": "Grasas", "icon": "drop-circle"},
+    "sugars": {"name":  "Azúcares", "icon": "candy"}
+  }
 }
