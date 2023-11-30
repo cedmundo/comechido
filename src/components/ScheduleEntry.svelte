@@ -26,9 +26,17 @@
         return paramKey;
     }
 
+    function convertScheduleTime(schedule) {
+        const todaySchedule = new Date();
+        const scheduleHoursMinutes = schedule.time.split(":");
+        todaySchedule.setHours(parseInt(scheduleHoursMinutes[0]), parseInt(scheduleHoursMinutes[1]) - paddingMinutes);
+        return todaySchedule.getTime();
+    }
+
     $: useKey = getParamKeyOrCurrent(key);
     $: schedule = schedules.filter(schedule => schedule.key === useKey)[0];
     $: requiredPoints = schedule.points.filter(entry => entry.points > 0);
+    $: diffMins = Math.round((convertScheduleTime(schedule) - new Date().getTime()) / 60000);
 </script>
 
 <div class="navbar bg-base-100">
@@ -40,7 +48,10 @@
     <div class="flex-1">
         <h1 class="text-xl">
             {schedule.name}
-            <span class="text-accent/25 text-sm">&nbsp;@{schedule.time}, {paddingMinutes} min antes.</span>
+            <span class="text-accent/25 text-sm">
+                &nbsp;@{schedule.time}
+                &nbsp;{diffMins > 0 ? 'adelanto de ' : 'retraso de '}{Math.abs(diffMins)} mins.
+            </span>
         </h1>
     </div>
     <div class="flex-none">
